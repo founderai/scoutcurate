@@ -1,0 +1,9 @@
+node_modules/
+build/
+.plasmo/
+.next/
+out/
+.env
+.env.local
+.env*.local
+*.zip

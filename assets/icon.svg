@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#FF6B35"/>
+  <!-- White inner circle -->
+  <circle cx="64" cy="64" r="48" fill="white" opacity="0.15"/>
+  <!-- Gift box body -->
+  <rect x="32" y="58" width="64" height="44" rx="4" fill="white"/>
+  <!-- Gift box lid -->
+  <rect x="28" y="48" width="72" height="16" rx="4" fill="#FFD166"/>
+  <!-- Ribbon vertical -->
+  <rect x="58" y="48" width="12" height="54" fill="#FF6B35"/>
+  <!-- Ribbon bow left loop -->
+  <ellipse cx="48" cy="42" rx="14" ry="8" fill="#FFD166" transform="rotate(-20 48 42)"/>
+  <!-- Ribbon bow right loop -->
+  <ellipse cx="80" cy="42" rx="14" ry="8" fill="#FFD166" transform="rotate(20 80 42)"/>
+  <!-- Bow center knot -->
+  <circle cx="64" cy="48" r="6" fill="#FF6B35"/>
+  <!-- Star sparkle top-right -->
+  <g transform="translate(96, 24) scale(0.7)" fill="#FFD166">
+    <polygon points="0,-10 2.9,-4 9.5,-3.1 4.8,1.5 5.9,8.1 0,5 -5.9,8.1 -4.8,1.5 -9.5,-3.1 -2.9,-4"/>
+  </g>
+  <!-- Small star bottom-left -->
+  <g transform="translate(24, 92) scale(0.45)" fill="white" opacity="0.7">
+    <polygon points="0,-10 2.9,-4 9.5,-3.1 4.8,1.5 5.9,8.1 0,5 -5.9,8.1 -4.8,1.5 -9.5,-3.1 -2.9,-4"/>
+  </g>
+</svg>
