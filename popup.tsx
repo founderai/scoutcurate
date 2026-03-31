@@ -107,14 +107,10 @@ export default function Popup() {
     setLoading(false)
 
     if (result.success) {
-      setAllProducts(result.products)
-      const filtered = applyGiftModeFilter(result.products, giftMode)
-      setDisplayedProducts(filtered)
-      setView("results")
-      await saveLastResults({ products: result.products, transcript })
+      const sid = localStorage.getItem("sc_session_id") ?? "unknown"
+
       // fire-and-forget intent capture
       try {
-        const sid = localStorage.getItem("sc_session_id") ?? "unknown"
         fetch("https://scoutcurate.com/api/track/intent", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -122,10 +118,54 @@ export default function Popup() {
             session_id: sid,
             recipient_type: mode === "scout" ? "kid" : "adult",
             style_tags: [mode],
-            metadata: { transcript_length: transcript.trim().length },
           }),
         }).catch(() => {})
       } catch {}
+
+      // Re-rank via recommendation engine — fallback to original order on failure
+      let ranked: GiftProduct[] = result.products
+      try {
+        const reRankRes = await fetch("https://scoutcurate.com/api/recommendations", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            session_id: sid,
+            intent: {
+              recipient_type: mode === "scout" ? "kid" : "adult",
+              style_tags: [mode],
+            },
+            products: result.products.map((p) => ({
+              id: p.name,
+              name: p.name,
+              category: p.category,
+              priceRange: p.priceRange,
+              tags: [p.category],
+            })),
+            mode,
+            limit: 25,
+          }),
+        })
+        if (reRankRes.ok) {
+          const reRankData = await reRankRes.json()
+          if (reRankData.results?.length > 0) {
+            const nameOrder: Record<string, number> = {}
+            reRankData.results.forEach((r: { product: { name: string } }, i: number) => {
+              nameOrder[r.product.name] = i
+            })
+            ranked = [...result.products].sort((a, b) => {
+              const ai = nameOrder[a.name] ?? 999
+              const bi = nameOrder[b.name] ?? 999
+              return ai - bi
+            })
+          }
+        }
+      } catch {}
+
+      setAllProducts(ranked)
+      const filtered = applyGiftModeFilter(ranked, giftMode)
+      setDisplayedProducts(filtered)
+      setView("results")
+      await saveLastResults({ products: ranked, transcript })
     } else {
       const failed = result as { success: false; error: string }
       setError(failed.error)

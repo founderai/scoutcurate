@@ -1,0 +1,63 @@
+const TAG_BUCKETS: Record<string, string> = {
+  minimal: "minimal",
+  minimalist: "minimal",
+  clean: "minimal",
+  simple: "minimal",
+  luxury: "luxury",
+  premium: "luxury",
+  high_end: "luxury",
+  upscale: "luxury",
+  gold: "gold",
+  golden: "gold",
+  rose_gold: "gold",
+  silver: "silver",
+  metallic: "silver",
+  cozy: "cozy",
+  warm: "cozy",
+  hygge: "cozy",
+  tech: "tech",
+  gadget: "tech",
+  electronic: "tech",
+  smart: "tech",
+  outdoor: "outdoor",
+  adventure: "outdoor",
+  hiking: "outdoor",
+  fitness: "fitness",
+  wellness: "wellness",
+  health: "wellness",
+  spa: "wellness",
+  skincare: "wellness",
+  beauty: "beauty",
+  makeup: "beauty",
+  jewelry: "jewelry",
+  accessories: "accessories",
+  fashion: "fashion",
+  clothing: "fashion",
+  apparel: "fashion",
+  kitchen: "kitchen",
+  cooking: "kitchen",
+  food: "food",
+  gourmet: "food",
+  coffee: "coffee",
+  books: "books",
+  reading: "books",
+  art: "art",
+  creative: "art",
+  craft: "art",
+  kids: "kids",
+  baby: "kids",
+  child: "kids",
+  toy: "kids",
+  educational: "educational",
+  stem: "educational",
+  learning: "educational",
+}
+
+export function normalizeTag(tag: string): string {
+  const clean = tag.toLowerCase().trim().replace(/\s+/g, "_")
+  return TAG_BUCKETS[clean] ?? clean
+}
+
+export function normalizeTags(tags: string[]): string[] {
+  return Array.from(new Set(tags.map(normalizeTag)))
+}
