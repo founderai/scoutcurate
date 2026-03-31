@@ -4,14 +4,14 @@ import Image from "next/image"
 export function Nav() {
   return (
     <nav className="sticky top-0 z-50 bg-curate-bg/95 backdrop-blur border-b border-curate-border shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-28 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
             src="/sxs-logo.png"
             alt="ScoutCurate"
-            width={160}
-            height={48}
-            className="h-10 w-auto object-contain"
+            width={400}
+            height={120}
+            className="h-24 w-auto object-contain"
             priority
           />
         </Link>
