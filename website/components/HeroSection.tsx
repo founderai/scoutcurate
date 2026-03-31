@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-curate-bg pt-16 pb-20 sm:pt-24 sm:pb-32">
@@ -70,9 +72,8 @@ export function HeroSection() {
                 {/* Mock popup header */}
                 <div className="px-4 pt-4 pb-3 bg-curate-bg border-b border-curate-border">
                   <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-curate-primary flex items-center justify-center text-white text-[10px] font-black">C</div>
-                      <span className="font-curate font-bold text-sm text-curate-primary">Scout<span className="text-curate-gold">Curate</span></span>
+                    <div className="flex items-center">
+                      <Image src="/main-logo.png" alt="ScoutCurate" width={90} height={36} className="h-8 w-auto object-contain" />
                     </div>
                   </div>
                   {/* Toggle pill */}

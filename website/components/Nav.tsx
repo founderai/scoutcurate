@@ -1,16 +1,19 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Nav() {
   return (
     <nav className="sticky top-0 z-50 bg-curate-bg/95 backdrop-blur border-b border-curate-border shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-full bg-curate-primary flex items-center justify-center text-white font-black text-sm">
-            SC
-          </div>
-          <span className="font-bold text-curate-primary font-curate text-lg tracking-tight">
-            Scout<span className="text-rose-gold">Curate</span>
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/sxs-logo.png"
+            alt="ScoutCurate"
+            width={160}
+            height={48}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         <div className="flex items-center gap-6 text-sm">
