@@ -1,5 +1,16 @@
 export type Mode = "scout" | "curate"
 
+export type GiftCategory = "jewelry" | "clothing"
+export type GiftRecipient = "her" | "him" | "unisex"
+export type GiftBudget = "under50" | "50to100" | "over100"
+
+export interface GiftModeState {
+  enabled: boolean
+  category: GiftCategory | null
+  recipient: GiftRecipient | null
+  budget: GiftBudget | null
+}
+
 export interface GiftProduct {
   name: string
   description: string

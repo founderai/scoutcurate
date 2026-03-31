@@ -1,8 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ─── CURATE THEME (default) ─── */
+:root,
+[data-theme="curate"] {
+  --bg:          #F5F1EB;
+  --bg-card:     #FFFFFF;
+  --bg-subtle:   #EDE9E2;
+  --primary:     #0F3D2E;
+  --primary-h:   #0a2d21;
+  --accent:      #C6A75E;
+  --accent-h:    #b08f44;
+  --text:        #1A1A1A;
+  --text-muted:  #6B6359;
+  --border:      #DDD6CC;
+  --border-h:    #C6A75E;
+  --badge-bg:    #EDE9E2;
+  --badge-text:  #0F3D2E;
+  --why-bg:      #F0EDE6;
+  --why-border:  #C6A75E;
+  --why-text:    #5A4A2E;
+  --btn-text:    #FFFFFF;
+  --scrollbar:   #C6A75E;
+  --shadow:      0 2px 12px rgba(15,61,46,0.08);
+  --shadow-h:    0 4px 20px rgba(15,61,46,0.14);
+  --font-ui:     'Inter', sans-serif;
+  --font-heading:'Playfair Display', serif;
+}
+
+/* ─── SCOUT THEME ─── */
+[data-theme="scout"] {
+  --bg:          #FFF8F4;
+  --bg-card:     #FFFFFF;
+  --bg-subtle:   #FFF0E8;
+  --primary:     #FF6B35;
+  --primary-h:   #e85520;
+  --accent:      #FFB347;
+  --accent-h:    #f09820;
+  --text:        #2D2D2D;
+  --text-muted:  #7A6A60;
+  --border:      #FFD9C4;
+  --border-h:    #FF6B35;
+  --badge-bg:    #FFF0E8;
+  --badge-text:  #FF6B35;
+  --why-bg:      #F0FFF4;
+  --why-border:  #4CAF50;
+  --why-text:    #2E7D32;
+  --btn-text:    #FFFFFF;
+  --scrollbar:   #FF6B35;
+  --shadow:      0 2px 12px rgba(255,107,53,0.08);
+  --shadow-h:    0 4px 20px rgba(255,107,53,0.16);
+  --font-ui:     'Nunito', sans-serif;
+  --font-heading:'Nunito', sans-serif;
+}
 
 * {
   box-sizing: border-box;
@@ -12,19 +65,50 @@ body {
   margin: 0;
   padding: 0;
   min-width: 420px;
+  font-family: var(--font-ui);
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background: #e0d0c0;
+  background: var(--scrollbar);
+  opacity: 0.4;
 }
-.dark ::-webkit-scrollbar-thumb {
-  background: #444;
+
+/* ─── Theme utility classes ─── */
+.theme-bg       { background-color: var(--bg); }
+.theme-bg-card  { background-color: var(--bg-card); }
+.theme-bg-subtle{ background-color: var(--bg-subtle); }
+.theme-text     { color: var(--text); }
+.theme-muted    { color: var(--text-muted); }
+.theme-border   { border-color: var(--border); }
+.theme-primary  { color: var(--primary); }
+.theme-accent   { color: var(--accent); }
+.theme-heading  { font-family: var(--font-heading); }
+.theme-ui       { font-family: var(--font-ui); }
+
+.theme-btn-primary {
+  background-color: var(--primary);
+  color: var(--btn-text);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.theme-btn-primary:hover {
+  background-color: var(--primary-h);
+  box-shadow: var(--shadow-h);
+}
+
+.theme-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+.theme-card:hover {
+  border-color: var(--border-h);
+  box-shadow: var(--shadow-h);
 }
