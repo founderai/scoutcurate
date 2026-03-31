@@ -4,21 +4,25 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        scout: ["'Nunito'", "sans-serif"],
-        curate: ["'Playfair Display'", "serif"],
-        sans: ["'Inter'", "sans-serif"],
+        scout:   ["'Nunito'", "sans-serif"],
+        curate:  ["'Playfair Display'", "serif"],
+        sans:    ["'Inter'", "sans-serif"],
       },
       colors: {
         scout: {
           primary: "#FF6B35",
-          light: "#FFF3ED",
-          dark: "#CC4A1A",
+          light:   "#FFF3ED",
+          dark:    "#CC4A1A",
+          subtle:  "#FFF0E8",
         },
         curate: {
-          primary: "#C9A84C",
-          bg: "#1A1A1A",
-          card: "#252525",
-          accent: "#E8D5A3",
+          primary: "#0F3D2E",
+          gold:    "#C6A75E",
+          bg:      "#F5F1EB",
+          card:    "#FFFFFF",
+          subtle:  "#EDE9E2",
+          muted:   "#6B6359",
+          border:  "#DDD6CC",
         },
       },
     },
