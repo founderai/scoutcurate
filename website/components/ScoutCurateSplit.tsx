@@ -29,12 +29,12 @@ export function ScoutCurateSplit() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {/* Scout Card */}
-          <div id="scout" className="rounded-3xl overflow-hidden border border-scout-primary/20 bg-white shadow-sm hover:shadow-md transition-shadow">
-            <div className="bg-scout-primary px-6 py-5">
+          <div id="scout" className="rounded-3xl overflow-hidden border border-curate-border bg-white shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-curate-primary px-6 py-5">
               <div className="flex items-center gap-3 mb-1">
-                <h3 className="font-scout font-black text-2xl text-white">Scout</h3>
+                <h3 className="font-curate font-bold text-2xl text-rose-gold-muted">Scout</h3>
               </div>
-              <p className="text-orange-100 text-sm font-medium">Perfect gifts for kids, found in seconds</p>
+              <p className="text-white/50 text-sm font-medium">Perfect gifts for kids, found in seconds</p>
             </div>
             <div className="p-6">
               <p className="text-sm text-curate-muted mb-5 leading-relaxed">
@@ -43,12 +43,12 @@ export function ScoutCurateSplit() {
               <ul className="space-y-2.5">
                 {scoutFeatures.map((f) => (
                   <li key={f} className="flex items-center gap-2.5 text-sm text-curate-primary">
-                    <span className="w-1 h-1 rounded-full bg-scout-primary flex-shrink-0 inline-block" />
+                    <span className="w-1 h-1 rounded-full bg-rose-gold flex-shrink-0 inline-block" />
                     {f}
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 bg-scout-subtle rounded-2xl p-4 border border-scout-primary/10">
+              <div className="mt-6 bg-curate-subtle rounded-2xl p-4 border border-curate-border">
                 <p className="text-[10px] text-curate-muted uppercase font-bold mb-1.5 tracking-widest">Example prompt</p>
                 <p className="text-sm text-curate-primary italic">"He's 10, obsessed with Minecraft and soccer, doesn't like anything too babyish"</p>
               </div>
