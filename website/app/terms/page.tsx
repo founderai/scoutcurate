@@ -10,19 +10,20 @@ const LAST_UPDATED = "March 27, 2026"
 
 export default function TermsPage() {
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
-      <div className="mb-10">
-        <Link href="/" className="text-sm text-scout-primary hover:underline">← Back to ScoutCurate</Link>
-        <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mt-4 mb-2">Terms of Service</h1>
-        <p className="text-sm text-gray-400">Last updated: {LAST_UPDATED}</p>
-      </div>
+    <div className="min-h-screen bg-curate-bg">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+        <div className="mb-10">
+          <Link href="/" className="text-sm text-curate-gold hover:underline font-medium">← Back to ScoutCurate</Link>
+          <h1 className="font-curate text-3xl sm:text-4xl font-bold text-curate-primary mt-4 mb-2">Terms of Service</h1>
+          <p className="text-sm text-curate-muted">Last updated: {LAST_UPDATED}</p>
+        </div>
 
-      <div className="prose prose-gray max-w-none space-y-8 text-gray-700 text-[15px] leading-relaxed">
+        <div className="space-y-8 text-curate-muted text-[15px] leading-relaxed">
 
         <section>
           <p>
             Welcome to <strong>ScoutCurate</strong> ("we," "our," or "us"), accessible at{" "}
-            <a href="https://scoutcurate.com" className="text-scout-primary hover:underline">scoutcurate.com</a> and
+            <a href="https://scoutcurate.com" className="text-curate-gold hover:underline">scoutcurate.com</a> and
             through our Chrome browser extension. By using ScoutCurate, you agree to these Terms of Service. If you
             do not agree, please do not use our extension or website.
           </p>
@@ -156,10 +157,11 @@ export default function TermsPage() {
         <Section title="12. Contact">
           <p>
             Questions about these Terms? Contact us at:{" "}
-            <a href="mailto:hello@scoutcurate.com" className="text-scout-primary hover:underline">hello@scoutcurate.com</a>
+            <a href="mailto:hello@scoutcurate.com" className="text-curate-gold hover:underline">hello@scoutcurate.com</a>
           </p>
         </Section>
 
+        </div>
       </div>
     </div>
   )
@@ -168,7 +170,7 @@ export default function TermsPage() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section>
-      <h2 className="text-lg font-bold text-gray-900 mb-3 border-b border-gray-100 pb-2">{title}</h2>
+      <h2 className="text-base font-bold text-curate-primary mb-3 border-b border-curate-border pb-2">{title}</h2>
       {children}
     </section>
   )

@@ -20,12 +20,6 @@ export function Nav() {
           <Link href="/blog" className="text-curate-muted hover:text-curate-primary transition-colors hidden sm:block font-medium">
             Blog
           </Link>
-          <Link href="/privacy" className="text-curate-muted hover:text-curate-primary transition-colors hidden sm:block font-medium">
-            Privacy
-          </Link>
-          <Link href="/terms" className="text-curate-muted hover:text-curate-primary transition-colors hidden sm:block font-medium">
-            Terms
-          </Link>
           <a
             href="https://chrome.google.com/webstore"
             target="_blank"

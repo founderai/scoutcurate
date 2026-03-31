@@ -8,22 +8,23 @@ export const metadata: Metadata = {
 
 export default function Post5() {
   return (
-    <article className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+    <article className="min-h-screen bg-curate-bg">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
       <div className="mb-8">
-        <Link href="/blog" className="text-sm text-scout-primary hover:underline">← Back to Blog</Link>
+        <Link href="/blog" className="text-sm text-curate-gold hover:underline font-medium">← Back to Blog</Link>
         <div className="flex items-center gap-3 mt-4 mb-4">
-          <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">About ScoutCurate</span>
-          <span className="text-xs text-gray-400">March 2026 · 4 min read</span>
+          <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-curate-subtle text-curate-muted">About ScoutCurate</span>
+          <span className="text-xs text-curate-muted">March 2026 · 4 min read</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight mb-4">
+        <h1 className="font-curate text-3xl sm:text-4xl font-bold text-curate-primary leading-tight mb-4">
           How We Use AI to Save You Hours of Gift Searching
         </h1>
-        <p className="text-lg text-gray-500 leading-relaxed">
-          Gift searching is broken. You spend 2 hours on Amazon and still aren't sure. Here's how ScoutCurate's Scout and Curate modes use AI to fix that in under 30 seconds.
+        <p className="text-lg text-curate-muted leading-relaxed">
+          Gift searching is broken. You spend 2 hours on Amazon and still aren’t sure. Here’s how ScoutCurate’s Scout and Curate modes use AI to fix that in under 30 seconds.
         </p>
       </div>
 
-      <div className="prose prose-gray max-w-none space-y-6 text-[15px] leading-relaxed text-gray-700">
+      <div className="space-y-6 text-[15px] leading-relaxed text-curate-muted">
 
         <p>
           Here's the gift-shopping experience most people have: you open Amazon, type something vague like "gifts for 8-year-old boy," and get served 4,000 results including a suspicious number of branded fidget spinners and licensed backpacks for movies from five years ago. You scroll for 45 minutes, second-guess everything, add three things to your cart, remove two of them, and eventually buy something you're not fully confident in.
@@ -32,7 +33,7 @@ export default function Post5() {
           This is a solved problem — or at least, it should be. We built ScoutCurate to fix it.
         </p>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">The Problem With Generic Gift Search</h2>
+        <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">The Problem With Generic Gift Search</h2>
         <p>
           Amazon's search algorithm is built to sell, not to recommend. When you search "gift for 7-year-old who loves dinosaurs and hates loud toys," the algorithm doesn't actually process that nuance. It pattern-matches on "gift" and "7-year-old" and surfaces the highest-traffic results, which are dominated by paid placements and generic best-sellers.
         </p>
@@ -40,7 +41,7 @@ export default function Post5() {
           The result is a fundamental mismatch: you have rich, specific knowledge about the person you're buying for, and the tool you're using ignores most of it.
         </p>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">What ScoutCurate Does Differently</h2>
+        <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">What ScoutCurate Does Differently</h2>
         <p>
           ScoutCurate feeds your description — in full, in plain language — to GPT-4o, one of the most capable AI models available. The AI doesn't pattern-match; it comprehends. It understands that "she's 7, loves dinosaurs and painting, hates loud toys" is a distinct personality profile that calls for specific product recommendations.
         </p>
@@ -48,7 +49,7 @@ export default function Post5() {
           The system prompt we've built for each mode isn't generic either. It encodes the logic of a thoughtful gift-giver who knows what to look for.
         </p>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">Scout Mode: Built for Kids</h2>
+        <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">Scout Mode: Built for Kids</h2>
         <p>
           Scout mode is specifically designed for finding gifts for children. When you describe a kid, Scout's AI applies a layered filter:
         </p>
@@ -62,7 +63,7 @@ export default function Post5() {
           The person using Scout is always an adult — a parent, aunt, uncle, grandparent, or family friend — shopping on behalf of a child. Scout treats you like a smart adult who wants real recommendations, not a list of whatever Amazon is currently promoting.
         </p>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">Curate Mode: Built for Adults</h2>
+        <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">Curate Mode: Built for Adults</h2>
         <p>
           Curate mode operates on a completely different logic. Adults are harder to shop for because they're more autonomous — they buy things they want when they want them. Generic recommendations fail because adults have developed tastes and strong opinions.
         </p>
@@ -76,7 +77,7 @@ export default function Post5() {
           <li><strong>Quality over quantity within price range</strong> — Curate won't recommend cheap versions of premium categories. If someone describes a person who appreciates quality, the suggestions reflect that.</li>
         </ul>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">Why Two Modes Instead of One?</h2>
+        <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">Why Two Modes Instead of One?</h2>
         <p>
           The design decision to split Scout and Curate came directly from the reality that kids and adults require fundamentally different gift logic. A system prompt optimized for children's gifts (safety, age-appropriateness, educational value) is actively wrong when applied to adults. And adult gift logic (luxury, lifestyle-matching, "things they wouldn't buy themselves") is useless for a 6-year-old.
         </p>
@@ -84,7 +85,7 @@ export default function Post5() {
           By building two distinct AI personas into the same extension, we can be genuinely good at both rather than mediocre at both.
         </p>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">The 30-Second Experience</h2>
+        <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">The 30-Second Experience</h2>
         <p>
           The full workflow looks like this: open the extension, pick Scout or Curate, hit the microphone button and describe the person out loud (or type it), hit Generate, and in about 15–20 seconds you have 25 curated gift suggestions with Amazon links. You can filter by category, shuffle the order to see a fresh perspective, and copy the whole list to share with a partner or family group chat.
         </p>
@@ -92,22 +93,23 @@ export default function Post5() {
           No more two-hour Amazon spirals. No more defaulting to an Amazon gift card because you couldn't decide.
         </p>
 
-        <div className="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-2xl p-6 text-center not-prose">
-          <p className="font-black text-xl text-gray-900 mb-1">Try it yourself</p>
-          <p className="text-sm text-gray-500 mb-5">
+        <div className="bg-curate-primary rounded-2xl p-6 text-center">
+          <p className="font-curate font-bold text-xl text-white mb-1">Try it yourself</p>
+          <p className="text-sm text-white/60 mb-5">
             ScoutCurate is a free Chrome extension. No account required. Describe the person, get 25 gifts.
           </p>
           <a
             href="https://chrome.google.com/webstore"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-scout-primary hover:bg-orange-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all"
+            className="inline-flex items-center gap-2 bg-curate-gold hover:bg-curate-gold/90 text-curate-primary font-bold px-6 py-3 rounded-xl text-sm transition-all"
           >
             Add ScoutCurate to Chrome — Free
           </a>
-          <p className="text-xs text-gray-400 mt-3">As an Amazon Associate, ScoutCurate earns from qualifying purchases. All recommendations are AI-generated.</p>
+          <p className="text-xs text-white/40 mt-3">As an Amazon Associate, ScoutCurate earns from qualifying purchases. All recommendations are AI-generated.</p>
         </div>
       </div>
+    </div>
     </article>
   )
 }
