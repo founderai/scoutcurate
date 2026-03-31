@@ -48,7 +48,7 @@ export default function Post2() {
           <li><strong>Hario V60 Drip Kettle (Electric)</strong> — Temperature-controlled gooseneck kettle. An upgrade most coffee lovers have on their wish list but won't buy themselves.</li>
         </ul>
         <p className="text-xs text-curate-muted bg-curate-subtle border border-curate-border rounded-lg px-3 py-2">
-          🛍️ <em>As an Amazon Associate, ScoutCurate earns from qualifying purchases on any Amazon link you click.</em>
+          <em>As an Amazon Associate, ScoutCurate earns from qualifying purchases on any Amazon link you click.</em>
         </p>
 
         <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">Unique Home Gadgets They Don't Know They Want</h2>

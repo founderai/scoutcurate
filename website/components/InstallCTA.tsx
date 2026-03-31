@@ -34,10 +34,10 @@ export function InstallCTA() {
         </a>
 
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/50">
-          <span className="flex items-center gap-1.5"><span className="text-curate-gold">✓</span> Free Chrome Extension</span>
-          <span className="flex items-center gap-1.5"><span className="text-curate-gold">✓</span> Works on any Amazon page</span>
-          <span className="flex items-center gap-1.5"><span className="text-curate-gold">✓</span> Your data stays local</span>
-          <span className="flex items-center gap-1.5"><span className="text-curate-gold">✓</span> 25 gifts in &lt;30 seconds</span>
+          <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-curate-gold inline-block" /> Free Chrome Extension</span>
+          <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-curate-gold inline-block" /> Works on any Amazon page</span>
+          <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-curate-gold inline-block" /> Your data stays local</span>
+          <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-curate-gold inline-block" /> 25 gifts in &lt;30 seconds</span>
         </div>
       </div>
     </section>

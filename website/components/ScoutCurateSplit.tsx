@@ -1,17 +1,17 @@
 const scoutFeatures = [
-  { icon: "🧒", text: "Age-appropriate safety filtering" },
-  { icon: "🎓", text: "Educational & skill-building picks" },
-  { icon: "🚫", text: "Accounts for what they hate" },
-  { icon: "⭐", text: "Parent-reviewed, highly-rated items" },
-  { icon: "🎨", text: "Covers STEM, arts, outdoor, books & more" },
+  "Age-appropriate safety filtering",
+  "Educational & skill-building picks",
+  "Accounts for what they hate",
+  "Parent-reviewed, highly-rated items",
+  "Covers STEM, arts, outdoor, books & more",
 ]
 
 const curateFeatures = [
-  { icon: "💎", text: "Luxury & premium quality focus" },
-  { icon: "✨", text: "Matches their aesthetic vibe" },
-  { icon: "🏠", text: "Tech, Home, Beauty & Wellness" },
-  { icon: "📊", text: "Highly-rated, pro-curated picks" },
-  { icon: "🎯", text: "Explains exactly why it's the right gift" },
+  "Luxury & premium quality focus",
+  "Matches their aesthetic vibe",
+  "Tech, Home, Beauty & Wellness",
+  "Highly-rated, pro-curated picks",
+  "Explains exactly why it's the right gift",
 ]
 
 export function ScoutCurateSplit() {
@@ -32,7 +32,6 @@ export function ScoutCurateSplit() {
           <div id="scout" className="rounded-3xl overflow-hidden border border-scout-primary/20 bg-white shadow-sm hover:shadow-md transition-shadow">
             <div className="bg-scout-primary px-6 py-5">
               <div className="flex items-center gap-3 mb-1">
-                <span className="text-2xl">🧒</span>
                 <h3 className="font-scout font-black text-2xl text-white">Scout</h3>
               </div>
               <p className="text-orange-100 text-sm font-medium">Perfect gifts for kids, found in seconds</p>
@@ -43,9 +42,9 @@ export function ScoutCurateSplit() {
               </p>
               <ul className="space-y-2.5">
                 {scoutFeatures.map((f) => (
-                  <li key={f.text} className="flex items-center gap-3 text-sm text-curate-primary">
-                    <span className="text-base w-6 flex-shrink-0">{f.icon}</span>
-                    {f.text}
+                  <li key={f} className="flex items-center gap-2.5 text-sm text-curate-primary">
+                    <span className="w-1 h-1 rounded-full bg-scout-primary flex-shrink-0 inline-block" />
+                    {f}
                   </li>
                 ))}
               </ul>
@@ -60,7 +59,6 @@ export function ScoutCurateSplit() {
           <div id="curate" className="rounded-3xl overflow-hidden border border-curate-border bg-white shadow-sm hover:shadow-md transition-shadow">
             <div className="bg-curate-primary px-6 py-5">
               <div className="flex items-center gap-3 mb-1">
-                <span className="text-2xl">👑</span>
                 <h3 className="font-curate font-bold text-2xl text-curate-gold">Curate</h3>
               </div>
               <p className="text-curate-gold/70 text-sm font-medium">Sophisticated gifts for adults, curated with taste</p>
@@ -71,9 +69,9 @@ export function ScoutCurateSplit() {
               </p>
               <ul className="space-y-2.5">
                 {curateFeatures.map((f) => (
-                  <li key={f.text} className="flex items-center gap-3 text-sm text-curate-primary">
-                    <span className="text-base w-6 flex-shrink-0">{f.icon}</span>
-                    {f.text}
+                  <li key={f} className="flex items-center gap-2.5 text-sm text-curate-primary">
+                    <span className="w-1 h-1 rounded-full bg-curate-gold flex-shrink-0 inline-block" />
+                    {f}
                   </li>
                 ))}
               </ul>

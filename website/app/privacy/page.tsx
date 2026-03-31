@@ -20,8 +20,8 @@ export default function PrivacyPage() {
 
         {/* Quick summary box */}
         <div className="bg-curate-subtle border border-curate-border rounded-2xl p-5 mb-10">
-          <h2 className="font-bold text-curate-primary mb-2 flex items-center gap-2">
-            <span>🔒</span> The Short Version
+          <h2 className="font-bold text-curate-primary mb-2">
+            The Short Version
           </h2>
           <ul className="text-sm text-curate-muted space-y-1.5 list-disc list-inside">
             <li>ScoutCurate collects <strong className="text-curate-primary">zero personal data</strong> about you.</li>

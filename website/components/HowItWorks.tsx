@@ -1,7 +1,6 @@
 const steps = [
   {
     number: "01",
-    icon: "🎙️",
     title: "Speak or Type",
     description:
       "Hit Record and describe the person — their age, interests, vibe, or what they hate. The more specific, the better the results.",
@@ -10,7 +9,6 @@ const steps = [
   },
   {
     number: "02",
-    icon: "✨",
     title: "AI Curates 25 Gifts",
     description:
       "ScoutCurate sends your description to GPT-4o, which applies deep gift-finding logic — safety, aesthetics, utility — and returns 25 perfect picks.",
@@ -19,7 +17,6 @@ const steps = [
   },
   {
     number: "03",
-    icon: "🛍️",
     title: "Buy on Amazon",
     description:
       'Each gift card has a "Buy on Amazon" button with your search pre-filled. Every link includes an affiliate tag — you shop, we earn a small commission at no cost to you.',
@@ -50,7 +47,6 @@ export function HowItWorks() {
               <div className={`text-6xl font-black mb-4 ${step.numColor} opacity-10 absolute top-4 right-5 leading-none font-curate`}>
                 {step.number}
               </div>
-              <div className="text-3xl mb-4">{step.icon}</div>
               <h3 className="font-bold text-base text-curate-primary mb-2">{step.title}</h3>
               <p className="text-sm text-curate-muted leading-relaxed">{step.description}</p>
             </div>

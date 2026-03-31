@@ -33,7 +33,7 @@ export default function Post3() {
           2026 has seen a convergence of two trends: appliances that are genuinely useful (not just smart for smart's sake), and a consumer appetite for high-quality cooking at home. The result is a new generation of kitchen gear that's worth the premium price — both as daily use items and as gifts.
         </p>
         <p className="text-xs text-curate-muted bg-curate-subtle border border-curate-border rounded-lg px-3 py-2">
-          🛍️ <em>As an Amazon Associate, ScoutCurate earns from qualifying purchases on any Amazon link you click.</em>
+          <em>As an Amazon Associate, ScoutCurate earns from qualifying purchases on any Amazon link you click.</em>
         </p>
 
         <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">1. Breville Barista Touch Impress Espresso Machine</h2>

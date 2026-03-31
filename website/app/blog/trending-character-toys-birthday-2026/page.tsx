@@ -33,7 +33,7 @@ export default function Post4() {
           This guide is for that situation. We've tracked the characters and toy lines getting the most traction with kids in 2026 — from the shows and movies dominating streaming to the toy aisles that keep selling out. Get ahead of the trend.
         </p>
         <p className="text-xs text-curate-muted bg-curate-subtle border border-curate-border rounded-lg px-3 py-2">
-          🛍️ <em>As an Amazon Associate, ScoutCurate earns from qualifying purchases on any Amazon link you click.</em>
+          <em>As an Amazon Associate, ScoutCurate earns from qualifying purchases on any Amazon link you click.</em>
         </p>
 
         <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">The 2026 Streaming Wave: What Kids Are Watching</h2>

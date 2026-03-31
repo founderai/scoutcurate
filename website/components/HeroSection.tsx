@@ -78,10 +78,10 @@ export function HeroSection() {
                   {/* Toggle pill */}
                   <div className="flex rounded-2xl bg-curate-subtle p-1">
                     <div className="flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-xl text-[10px] font-bold text-curate-muted">
-                      🧒 SCOUT <span className="opacity-60 font-normal">Kids</span>
+                      SCOUT <span className="opacity-60 font-normal">Kids</span>
                     </div>
                     <div className="flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-xl bg-curate-primary text-white text-[10px] font-bold shadow-sm">
-                      👑 CURATE <span className="opacity-80 font-normal">Adults</span>
+                      CURATE <span className="opacity-80 font-normal">Adults</span>
                     </div>
                   </div>
                 </div>

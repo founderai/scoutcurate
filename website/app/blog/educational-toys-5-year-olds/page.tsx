@@ -39,7 +39,7 @@ export default function Post1() {
           Magnetic tiles (brands like Magna-Tiles and Connetix) remain one of the highest-rated educational toys year after year — and for good reason. Kids build 2D and 3D structures, learning basic geometry without realizing it. They're open-ended, which means the play never gets old. A starter set of 32–64 pieces is ideal for age 5.
         </p>
         <p className="text-xs text-curate-muted bg-curate-subtle border border-curate-border rounded-lg px-3 py-2">
-          🛍️ <em>As an Amazon Associate, ScoutCurate earns from qualifying purchases on any Amazon link you click.</em>
+          <em>As an Amazon Associate, ScoutCurate earns from qualifying purchases on any Amazon link you click.</em>
         </p>
 
         <h2 className="text-xl font-bold text-curate-primary mt-8 mb-3">2. LEGO DUPLO STEM Sets</h2>
