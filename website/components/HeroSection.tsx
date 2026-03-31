@@ -73,7 +73,7 @@ export function HeroSection() {
                 <div className="px-4 pt-4 pb-3 bg-curate-bg border-b border-curate-border">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center">
-                      <Image src="/main-logo.png" alt="ScoutCurate" width={260} height={104} className="h-20 w-auto object-contain" />
+                      <Image src="/main-logo.png" alt="ScoutCurate" width={260} height={104} className="h-28 w-auto object-contain" />
                     </div>
                   </div>
                   {/* Toggle pill */}
