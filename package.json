@@ -32,11 +32,9 @@
   "manifest": {
     "manifest_version": 3,
     "name": "ScoutCurate - AI Gift Finder",
-    "description": "Scout finds perfect gifts for kids. Curate finds curated gifts for adults.",
+    "description": "AI-powered gift ideas for kids (Scout) and adults (Curate). Speak or type a description, get 25 Amazon gift suggestions instantly.",
     "permissions": [
-      "activeTab",
-      "storage",
-      "identity"
+      "storage"
     ],
     "host_permissions": [
       "https://api.openai.com/*"
