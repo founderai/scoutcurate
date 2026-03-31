@@ -112,6 +112,20 @@ export default function Popup() {
       setDisplayedProducts(filtered)
       setView("results")
       await saveLastResults({ products: result.products, transcript })
+      // fire-and-forget intent capture
+      try {
+        const sid = localStorage.getItem("sc_session_id") ?? "unknown"
+        fetch("https://scoutcurate.com/api/track/intent", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            session_id: sid,
+            recipient_type: mode === "scout" ? "kid" : "adult",
+            style_tags: [mode],
+            metadata: { transcript_length: transcript.trim().length },
+          }),
+        }).catch(() => {})
+      } catch {}
     } else {
       const failed = result as { success: false; error: string }
       setError(failed.error)

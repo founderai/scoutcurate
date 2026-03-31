@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1280" />
+<title>ScoutCurate Promo Screenshot</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px;
+    height: 800px;
+    overflow: hidden;
+    background: #F5F1EB;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    width: 1280px;
+    height: 800px;
+    background: #F5F1EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Background blobs */
+  .blob1 {
+    position: absolute;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, #C6A75E22 0%, transparent 70%);
+    top: -100px; right: 200px;
+    border-radius: 50%;
+  }
+  .blob2 {
+    position: absolute;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, #B76E7922 0%, transparent 70%);
+    bottom: -100px; left: 100px;
+    border-radius: 50%;
+  }
+
+  /* Left side */
+  .left {
+    flex: 1;
+    max-width: 560px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #F5E6E8;
+    border: 1px solid #B76E7944;
+    color: #0F3D2E;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
+  .badge-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #B76E79;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    font-weight: 700;
+    color: #0F3D2E;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  h1 em {
+    color: #B76E79;
+    font-style: italic;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color: #6B6359;
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 460px;
+  }
+  .subtitle strong { color: #0F3D2E; font-weight: 600; }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #6B6359;
+  }
+  .feature-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #C6A75E;
+    flex-shrink: 0;
+  }
+
+  /* Right side — mock extension */
+  .right {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  .popup {
+    width: 320px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 32px 80px #0F3D2E22, 0 8px 24px #0F3D2E11;
+    border: 1px solid #DDD6CC;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .popup-glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, #B76E7918 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  .popup-header {
+    background: #F5F1EB;
+    padding: 16px 16px 12px;
+    border-bottom: 1px solid #DDD6CC;
+  }
+
+  .popup-logo {
+    margin-bottom: 12px;
+  }
+
+  .toggle {
+    display: flex;
+    background: #EDE9E2;
+    border-radius: 16px;
+    padding: 4px;
+  }
+  .toggle-btn {
+    flex: 1;
+    text-align: center;
+    padding: 7px 0;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #6B6359;
+  }
+  .toggle-btn.active {
+    background: #0F3D2E;
+    color: white;
+    box-shadow: 0 2px 6px #0F3D2E33;
+  }
+  .toggle-btn .sub {
+    font-weight: 400;
+    opacity: 0.7;
+    margin-left: 3px;
+  }
+
+  .popup-body {
+    padding: 12px;
+    background: #F5F1EB;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .gift-card {
+    background: white;
+    border-radius: 12px;
+    padding: 10px 12px;
+    border: 1px solid #DDD6CC;
+    box-shadow: 0 1px 4px #0F3D2E08;
+  }
+  .gift-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .gift-tag {
+    font-size: 9px;
+    font-weight: 700;
+    background: #EDE9E2;
+    color: #0F3D2E;
+    padding: 2px 7px;
+    border-radius: 999px;
+  }
+  .gift-price {
+    font-size: 9px;
+    font-weight: 600;
+    color: #C6A75E;
+  }
+  .gift-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: #0F3D2E;
+  }
+
+  .popup-footer {
+    text-align: center;
+    padding: 8px;
+    font-size: 9px;
+    color: #6B6359;
+  }
+
+  .floating-badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #B76E79;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px #B76E7944;
+  }
+
+  .wordmark {
+    margin-bottom: 24px;
+  }
+  .wordmark img { height: 80px; width: auto; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="blob1"></div>
+  <div class="blob2"></div>
+
+  <div class="left">
+    <div class="wordmark"><img src="website/public/sxs-logo.png" alt="ScoutCurate" /></div>
+    <div class="badge">
+      <div class="badge-dot"></div>
+      Free Chrome Extension — AI-Powered Gift Finder
+    </div>
+
+    <h1>The perfect gift,<br /><em>found in seconds.</em></h1>
+
+    <p class="subtitle">
+      Speak or type a description — ScoutCurate's AI curates
+      <strong>25 hand-picked Amazon gifts</strong> matched to any
+      age, personality, or vibe.
+    </p>
+
+    <div class="features">
+      <div class="feature"><div class="feature-dot"></div> Voice or text input — no typing required</div>
+      <div class="feature"><div class="feature-dot"></div> 25 personalized gifts powered by GPT-4o</div>
+      <div class="feature"><div class="feature-dot"></div> Scout mode for kids · Curate mode for adults</div>
+      <div class="feature"><div class="feature-dot"></div> No account required — completely free</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="popup-glow"></div>
+    <div class="popup">
+      <div class="floating-badge">25 gifts</div>
+
+      <div class="popup-header">
+        <div class="popup-logo"><img src="website/public/main-logo.png" alt="ScoutCurate" style="height:200px;width:auto;" /></div>
+        <div class="toggle">
+          <div class="toggle-btn">SCOUT <span class="sub">Kids</span></div>
+          <div class="toggle-btn active">CURATE <span class="sub">Adults</span></div>
+        </div>
+      </div>
+
+      <div class="popup-body">
+        <div class="gift-card">
+          <div class="gift-card-top">
+            <span class="gift-tag">Kitchen</span>
+            <span class="gift-price">$79–$99</span>
+          </div>
+          <div class="gift-name">1. Ember Temperature Control Mug</div>
+        </div>
+        <div class="gift-card">
+          <div class="gift-card-top">
+            <span class="gift-tag">Wellness</span>
+            <span class="gift-price">$25–$40</span>
+          </div>
+          <div class="gift-name">2. Silk Sleep Mask Set</div>
+        </div>
+        <div class="gift-card">
+          <div class="gift-card-top">
+            <span class="gift-tag">Stationery</span>
+            <span class="gift-price">$30–$55</span>
+          </div>
+          <div class="gift-name">3. Leather Bound Journal</div>
+        </div>
+        <div class="gift-card">
+          <div class="gift-card-top">
+            <span class="gift-tag">Tech</span>
+            <span class="gift-price">$45–$70</span>
+          </div>
+          <div class="gift-name">4. Wireless Charging Pad</div>
+        </div>
+        <div class="popup-footer">+ 21 more gifts</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

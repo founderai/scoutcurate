@@ -1,6 +1,31 @@
 import { ExternalLink, DollarSign } from "lucide-react"
 import type { GiftProduct } from "~lib/types"
 
+const TRACKING_BASE = "https://scoutcurate.com"
+const SESSION_KEY = "sc_session_id"
+
+function getSessionId(): string {
+  let id = localStorage.getItem(SESSION_KEY)
+  if (!id) {
+    id = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
+      const r = (Math.random() * 16) | 0
+      return (c === "x" ? r : (r & 0x3) | 0x8).toString(16)
+    })
+    localStorage.setItem(SESSION_KEY, id)
+  }
+  return id
+}
+
+function track(path: string, body: Record<string, unknown>) {
+  try {
+    fetch(`${TRACKING_BASE}${path}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session_id: getSessionId(), ...body }),
+    }).catch(() => {})
+  } catch {}
+}
+
 interface ProductCardProps {
   product: GiftProduct
   index: number
@@ -74,6 +99,18 @@ export function ProductCard({ product, index, mode }: ProductCardProps) {
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-1.5 w-full py-2 rounded-xl text-xs font-bold transition-all duration-150 hover:opacity-90"
         style={{ background: "var(--primary)", color: "var(--btn-text)" }}
+        onClick={() => {
+          track("/api/track/event", {
+            product_id: product.name,
+            event_type: "outbound_click",
+            position: index,
+            metadata: { mode, category: product.category, priceRange: product.priceRange },
+          })
+          track("/api/track/conversion", {
+            product_id: product.name,
+            affiliate_url: product.amazonSearchUrl,
+          })
+        }}
       >
         <ExternalLink size={12} />
         Buy on Amazon
