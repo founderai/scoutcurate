@@ -20,7 +20,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <div className="w-7 h-7 rounded-full bg-curate-gold flex items-center justify-center text-curate-primary font-black text-xs">SC</div>
-              <span className="font-curate font-bold text-white text-sm">Scout<span className="text-curate-gold">Curate</span></span>
+              <span className="font-curate font-bold text-white text-sm">Scout<span className="text-rose-gold-muted">Curate</span></span>
             </div>
             <p className="text-xs leading-relaxed">
               AI-powered gift finder for kids and adults. Free Chrome extension.
@@ -30,25 +30,25 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white/70 text-sm mb-3">Product</h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="hover:text-curate-gold transition-colors">Chrome Extension</a></li>
-              <li><Link href="/#how-it-works" className="hover:text-curate-gold transition-colors">How It Works</Link></li>
-              <li><Link href="/#scout" className="hover:text-curate-gold transition-colors">Scout (Kids)</Link></li>
-              <li><Link href="/#curate" className="hover:text-curate-gold transition-colors">Curate (Adults)</Link></li>
+              <li><a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="hover:text-rose-gold-muted transition-colors">Chrome Extension</a></li>
+              <li><Link href="/#how-it-works" className="hover:text-rose-gold-muted transition-colors">How It Works</Link></li>
+              <li><Link href="/#scout" className="hover:text-rose-gold-muted transition-colors">Scout (Kids)</Link></li>
+              <li><Link href="/#curate" className="hover:text-rose-gold-muted transition-colors">Curate (Adults)</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-white/70 text-sm mb-3">Legal</h4>
             <ul className="space-y-2 text-xs">
-              <li><Link href="/terms" className="hover:text-curate-gold transition-colors">Terms of Service</Link></li>
-              <li><Link href="/privacy" className="hover:text-curate-gold transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-rose-gold-muted transition-colors">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="hover:text-rose-gold-muted transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold text-white/70 text-sm mb-3">Contact</h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="mailto:hello@scoutcurate.com" className="hover:text-curate-gold transition-colors">hello@scoutcurate.com</a></li>
+              <li><a href="mailto:hello@scoutcurate.com" className="hover:text-rose-gold-muted transition-colors">hello@scoutcurate.com</a></li>
             </ul>
           </div>
         </div>

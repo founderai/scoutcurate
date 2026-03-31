@@ -9,7 +9,7 @@ export function Nav() {
             SC
           </div>
           <span className="font-bold text-curate-primary font-curate text-lg tracking-tight">
-            Scout<span className="text-curate-gold">Curate</span>
+            Scout<span className="text-rose-gold">Curate</span>
           </span>
         </Link>
 

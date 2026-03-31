@@ -11,15 +11,15 @@ export function HeroSection() {
           {/* Left — copy */}
           <div>
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-curate-subtle border border-curate-border text-curate-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-curate-gold animate-pulse inline-block" />
+            <div className="inline-flex items-center gap-2 bg-rose-gold-light border border-rose-gold/30 text-curate-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-rose-gold animate-pulse inline-block" />
               Free Chrome Extension — AI-Powered Gift Finder
             </div>
 
             {/* Headline */}
             <h1 className="font-curate text-4xl sm:text-5xl lg:text-6xl font-bold text-curate-primary leading-tight mb-6 tracking-tight">
               The perfect gift,<br />
-              <span className="text-curate-gold italic">found in seconds.</span>
+              <span className="text-rose-gold italic">found in seconds.</span>
             </h1>
 
             <p className="text-base sm:text-lg text-curate-muted max-w-lg mb-10 leading-relaxed">
@@ -53,7 +53,7 @@ export function HeroSection() {
             <div className="flex flex-wrap gap-5">
               {["No account needed", "25 gifts in &lt;30s", "Free forever"].map((t) => (
                 <span key={t} className="flex items-center gap-1.5 text-sm text-curate-muted">
-                  <span className="text-curate-gold font-bold">✓</span>
+                  <span className="text-rose-gold font-bold">✓</span>
                   <span dangerouslySetInnerHTML={{ __html: t }} />
                 </span>
               ))}
@@ -64,7 +64,7 @@ export function HeroSection() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Outer glow ring */}
-              <div className="absolute inset-0 rounded-3xl bg-curate-gold/20 blur-2xl scale-105 pointer-events-none" />
+              <div className="absolute inset-0 rounded-3xl bg-rose-gold/15 blur-2xl scale-105 pointer-events-none" />
 
               <div className="relative bg-white rounded-3xl shadow-2xl shadow-curate-primary/15 overflow-hidden w-[300px] sm:w-[340px] border border-curate-border">
                 {/* Mock popup header */}
@@ -108,8 +108,8 @@ export function HeroSection() {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -top-3 -right-3 bg-curate-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg">
-                25 gifts ⚡
+              <div className="absolute -top-3 -right-3 bg-rose-gold text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg">
+                25 gifts
               </div>
             </div>
           </div>

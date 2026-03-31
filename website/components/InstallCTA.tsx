@@ -2,18 +2,18 @@ export function InstallCTA() {
   return (
     <section className="py-20 sm:py-28 bg-curate-primary relative overflow-hidden">
       {/* Subtle gold blob */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-curate-gold/10 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-rose-gold/10 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-x-1/4 translate-y-1/4 pointer-events-none" />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-xs font-semibold px-3 py-1.5 rounded-full mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-curate-gold animate-pulse inline-block" />
+          <span className="w-1.5 h-1.5 rounded-full bg-rose-gold-muted animate-pulse inline-block" />
           Free — No account required
         </div>
 
         <h2 className="font-curate text-3xl sm:text-5xl font-bold text-white mb-5 leading-tight">
           Never struggle with{" "}
-          <span className="text-curate-gold italic">gift ideas</span>{" "}
+          <span className="text-rose-gold-muted italic">gift ideas</span>{" "}
           again.
         </h2>
 

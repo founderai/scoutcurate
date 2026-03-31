@@ -12,8 +12,8 @@ const steps = [
     title: "AI Curates 25 Gifts",
     description:
       "ScoutCurate sends your description to GPT-4o, which applies deep gift-finding logic — safety, aesthetics, utility — and returns 25 perfect picks.",
-    accent: "border-curate-gold/40",
-    numColor: "text-curate-gold",
+    accent: "border-rose-gold/40",
+    numColor: "text-rose-gold",
   },
   {
     number: "03",

@@ -24,6 +24,12 @@ module.exports = {
           muted:   "#6B6359",
           border:  "#DDD6CC",
         },
+        "rose-gold": {
+          DEFAULT: "#B76E79",
+          light:   "#F5E6E8",
+          dark:    "#9A5560",
+          muted:   "#D4A0A8",
+        },
       },
     },
   },
