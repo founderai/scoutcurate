@@ -29,6 +29,11 @@
     "tailwindcss": "3.4.7",
     "typescript": "5.5.4"
   },
+  "alias": {
+    "openai/resources/audio/audio": "./lib/openai-audio-shim.js",
+    "openai/resources/audio/index": "./lib/openai-audio-shim.js",
+    "openai/resources/audio": "./lib/openai-audio-shim.js"
+  },
   "manifest": {
     "manifest_version": 3,
     "name": "ScoutCurate - AI Gift Finder",
