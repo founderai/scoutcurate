@@ -1,7 +1,7 @@
 {
   "name": "scoutcurate",
   "displayName": "ScoutCurate - AI Gift Finder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scout finds gifts for kids. Curate finds gifts for adults. AI-powered, Amazon affiliate-linked.",
   "private": true,
   "scripts": {
